@@ -1,0 +1,748 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    background-color: rgb(58, 58, 58);
+    padding: 25px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-menu {
+    height: 30px;
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+input[type=button] {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: whitesmoke;
+}
+
+input[type=button]:focus {
+    outline: none;
+    box-shadow: 0 0 3px 4px gray;
+}
+
+input:disabled {
+    background-color: dimgray;
+}
+
+input:disabled:hover {
+    background-color: dimgray;
+}
+
+input[type=button]:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#edit {
+    background-image: url(icons/code-solid.svg);
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+.firstBlock {
+    width: 150px;
+    display: flex;
+}
+
+#bold {
+    background-image: url(icons/bold-solid.svg);
+    background-repeat: no-repeat;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#italic {
+    background-image: url(icons/italic-solid.svg);
+    background-repeat: no-repeat;
+}
+
+#underline {
+    background-image: url(icons/underline-solid.svg);
+    background-repeat: no-repeat;
+}
+
+#strikeThrough {
+    background-image: url(icons/strikethrough-solid.svg);
+    background-repeat: no-repeat;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.secondBlock {
+    width: 110px;
+    display: flex;
+}
+
+#left {
+    background-image: url(icons/align-left-solid.svg);
+    background-repeat: no-repeat;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#center {
+    background-image: url(icons/align-center-solid.svg);
+    background-repeat: no-repeat;
+}
+
+#right {
+    background-image: url(icons/align-right-solid.svg);
+    background-repeat: no-repeat;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.thirdBlock {
+    width: 150px;
+    display: flex;
+}
+
+#fontFamily {
+    background-image: url(icons/font-solid.svg);
+    background-repeat: no-repeat;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#fontSize {
+    background-image: url(icons/text-height-solid.svg);
+    background-repeat: no-repeat;
+}
+
+#color {
+    background-image: url(icons/palette-solid.svg);
+    background-repeat: no-repeat;
+}
+
+#backgroundColor {
+    background-image: url(icons/image-solid.svg);
+    background-repeat: no-repeat;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#signIn {
+    background-image: url(icons/lock-solid.svg);
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+#signOut {
+    background-image: url(icons/unlock-solid.svg);
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    display: none;
+}
+
+.edit,
+.logIn {
+    width: 40px;
+    height: 40px;
+}
+
+.main {
+    height: 545px;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    z-index: 0;
+}
+
+.main p {
+    margin-bottom: 10px;
+}
+
+#edit:hover {
+    cursor: default;
+    background-color: internal-light-dark(rgba(239, 239, 239, 0.3), rgba(19, 1, 1, 0.3));
+}
+
+.fontsFamily {
+    width: 200px;
+    height: 182px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    position: absolute;
+    top: 64px;
+    left: 582px;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+}
+
+.option1 {
+    height: 30px;
+    cursor: pointer;
+    padding: 10px;
+    line-height: 10px;
+    border: none;
+    text-align: left;
+}
+
+.option1:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.option1:focus {
+    outline: none;
+    background-color: royalblue;
+    color: white;
+}
+
+#Arial {
+    font-family: Arial;
+}
+
+#Georgia {
+    font-family: Georgia;
+}
+
+#Impact {
+    font-family: Impact;
+}
+
+#Tahoma {
+    font-family: Tahoma;
+}
+
+#TimesNewRoman {
+    font-family: 'Times New Roman';
+}
+
+#Verdana {
+    font-family: Verdana;
+}
+
+#S12px {
+    font-size: 12px;
+}
+
+#S14px {
+    font-size: 14px;
+}
+
+#S16px {
+    font-size: 16px;
+}
+
+#S18px {
+    font-size: 18px;
+}
+
+#S20px {
+    font-size: 20px;
+}
+
+#S22px {
+    font-size: 22px;
+}
+
+#S25px {
+    font-size: 25px;
+}
+
+#S30px {
+    font-size: 30px;
+}
+
+.fontsSize {
+    width: 170px;
+    height: 300px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: #fff;
+    position: absolute;
+    top: 64px;
+    left: 657px;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+}
+
+.option2 {
+    height: 50px;
+    cursor: pointer;
+    padding: 7px;
+    line-height: 10px;
+    border: none;
+    text-align: left;
+}
+
+.option2:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.option2:focus {
+    outline: none;
+    background-color: royalblue;
+    color: white;
+}
+
+.colors {
+    width: 600px;
+    height: 340px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 385px;
+    display: none;
+}
+
+.head {
+    height: 40px;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#close1,
+#close2,
+#close3,
+#close4,
+#close5 {
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    background-image: url(icons/times-solid.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.color-flex,
+.backgroundColor-flex {
+    margin-top: 15px;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.block {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.image {
+    width: 600px;
+    height: 385px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 385px;
+    display: none;
+}
+
+.images {
+    margin-top: 15px;
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+    display: none;
+}
+
+.navMenu {
+    margin-top: -17px;
+}
+
+.img {
+    width: 190px;
+    height: 100px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.file {
+    height: 70px;
+    width: 100%;
+    margin-top: 10px;
+    display: none;
+}
+
+.signIn {
+    width: 600px;
+    height: 260px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 375px;
+    display: none;
+}
+
+.signIn h1 {
+    text-align: center;
+}
+
+#login {
+    height: 35px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#login:focus {
+    outline: none;
+}
+
+#password {
+    height: 35px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#password:focus {
+    outline: none;
+}
+
+.signIn p {
+    color: red;
+    display: none;
+    margin-bottom: 5px;
+}
+
+#buttonSign {
+    height: 35px;
+    width: 100%;
+    color: #fff;
+    background-color: rgb(39, 39, 53);
+    border: none;
+    border-radius: 5px;
+}
+
+.header-edit {
+    height: 30px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: none;
+}
+
+.adder {
+    width: 100%;
+    display: flex;
+
+}
+
+#save {
+    background-image: url(icons/save-solid.svg);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#table {
+    background-image: url(icons/table-solid.svg);
+}
+
+#list1 {
+    background-image: url(icons/list-ol-solid.svg);
+}
+
+#list2 {
+    background-image: url(icons/list-ul-solid.svg);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#editText {
+    height: 545px;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    resize: none;
+    display: none;
+}
+
+.table {
+    width: 700px;
+    height: 400px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    position: absolute;
+    top: 25px;
+    left: 375px;
+    display: none;
+}
+
+.tableSettings {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.tableTr,
+.tableTd,
+.widthTd,
+.heightTd,
+.widthBorder {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+#tableTr,
+#tableTd,
+#widthTd,
+#heightTd,
+#widthBorder {
+    height: 35px;
+    width: 330px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+
+#tableTr,
+#widthTd,
+#widthBorder,
+#typeBorder {
+    margin-right: 10px;
+}
+
+.otherSettings {
+    display: flex;
+    flex-direction: row;
+}
+
+.widthBorder {
+    display: flex;
+    flex-direction: column;
+}
+
+.typeBorder,
+.colorBorder {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+#typeBorder,
+#colorBorder {
+    height: 35px;
+    width: 160px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+
+.someText {
+    color: red;
+    margin: 10px 0;
+    display: none;
+}
+
+#reset {
+    width: 328px;
+    height: 35px;
+    background-color: rgb(197, 1, 1);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#createTable {
+    width: 327px;
+    height: 35px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.listOl {
+    width: 700px;
+    height: 300px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    position: absolute;
+    top: 25px;
+    left: 375px;
+    display: none;
+}
+
+.countOl,
+.typeOl {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+#countOl,
+#typeOl {
+    height: 35px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+
+.someText1 {
+    color: red;
+    margin: 10px 0;
+    display: none;
+}
+
+#resetOl {
+    width: 328px;
+    height: 35px;
+    background-color: rgb(197, 1, 1);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#createOlList {
+    width: 327px;
+    height: 35px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+ul,
+ol {
+    margin-left: 30px;
+}
+
+.listUl {
+    width: 700px;
+    height: 300px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    position: absolute;
+    top: 25px;
+    left: 375px;
+    display: none;
+}
+
+.countUl,
+.typeUl {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+#countUl,
+#typeUl {
+    height: 35px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+
+.someText2 {
+    color: red;
+    margin: 10px 0;
+    display: none;
+}
+
+#resetUl {
+    width: 328px;
+    height: 35px;
+    background-color: rgb(197, 1, 1);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#createUlList {
+    width: 327px;
+    height: 35px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.signOut {
+    width: 300px;
+    height: 70px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 250px;
+    left: 540px;
+    display: none;
+}
+
+#cancel {
+    height: 35px;
+    width: 130px;
+    background-color: rgb(17, 15, 15);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+#buttonSignOut {
+    height: 35px;
+    width: 130px;
+    background-color: rgb(197, 1, 1);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextEditor2.0</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-menu">
+            <div class="edit">
+                <input type="button" id="edit" disabled>
+            </div>
+            <div class="firstBlock">
+                <input type="button" id="bold">
+                <input type="button" id="italic">
+                <input type="button" id="underline">
+                <input type="button" id="strikeThrough">
+            </div>
+            <div class="btn-group btn-group-toggle secondBlock" data-toggle="buttons">
+                <input type="button" id="left">
+                <input type="button" id="center">
+                <input type="button" id="right">
+            </div>
+            <div class="thirdBlock">
+                <input type="button" id="fontFamily">
+                <input type="button" id="fontSize">
+                <input type="button" id="color">
+                <input type="button" id="backgroundColor">
+            </div>
+            <div class="logIn">
+                <input type="button" id="signIn">
+                <input type="button" id="signOut">
+            </div>
+        </div>
+        <div class="header-edit">
+            <div class="adder">
+                <input type="button" id="save">
+                <input type="button" id="table">
+                <input type="button" id="list1">
+                <input type="button" id="list2">
+            </div>
+        </div>
+
+    </header>
+    <div class="main">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eum aperiam quaerat itaque!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eum aperiam quaerat itaque!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eum aperiam quaerat itaque!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eum aperiam quaerat itaque!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eum aperiam quaerat itaque!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eum aperiam quaerat itaque!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eum aperiam quaerat itaque!</p>
+    </div>
+    <textarea id="editText" cols="30" rows="10"></textarea>
+    <div class="fontsFamily">
+        <button class="option1" id="Arial" value="Arial">Arial</button>
+        <button class="option1" id="Georgia" value="Georgia">Georgia</button>
+        <button class="option1" id="Impact" value="Impact">Impact</button>
+        <button class="option1" id="Tahoma" value="Tahoma">Tahoma</button>
+        <button class="option1" id="TimesNewRoman" value="Times New Roman">Times New Roman</button>
+        <button class="option1" id="Verdana" value="Verdana">Verdana</button>
+    </div>
+    <div class="fontsSize">
+        <button class="option2" id="S12px" value="12px">12px</button>
+        <button class="option2" id="S14px" value="14px">14px</button>
+        <button class="option2" id="S16px" value="16px">16px</button>
+        <button class="option2" id="S18px" value="18px">18px</button>
+        <button class="option2" id="S20px" value="20px">20px</button>
+        <button class="option2" id="S22px" value="22px">22px</button>
+        <button class="option2" id="S25px" value="25px">25px</button>
+        <button class="option2" id="S30px" value="30px">30px</button>
+    </div>
+
+    <div class="colors">
+        <div class="head">
+            <h2>Choose text color</h2>
+            <input type="button" id="close1">
+        </div>
+        <hr>
+        <div class="color-flex">
+            <div class="block" style="background-color: teal"></div>
+            <div class="block" style="background-color: seagreen"></div>
+            <div class="block" style="background-color: springgreen"></div>
+            <div class="block" style="background-color: green"></div>
+            <div class="block" style="background-color: steelblue"></div>
+            <div class="block" style="background-color:mediumblue"></div>
+            <div class="block" style="background-color:mediumorchid"></div>
+            <div class="block" style="background-color: indigo"></div>
+            <div class="block" style="background-color: rgb(17, 51, 32)"></div>
+            <div class="block" style="background-color: rgb(10, 41, 24)"></div>
+            <div class="block" style="background-color: orange"></div>
+            <div class="block" style="background-color: darkorange"></div>
+            <div class="block" style="background-color: chocolate"></div>
+            <div class="block" style="background-color: orangered"></div>
+            <div class="block" style="background-color: red"></div>
+            <div class="block" style="background-color:firebrick"></div>
+            <div class="block" style="background-color: whitesmoke"></div>
+            <div class="block" style="background-color:lightgray"></div>
+            <div class="block" style="background-color: darkgray"></div>
+            <div class="block" style="background-color: gray"></div>
+            <div class="block" style="background-color: black"></div>
+        </div>
+    </div>
+
+    <div class="image">
+        <div class="head">
+            <h2>Choose background color or image</h2>
+            <input type="button" id="close2">
+        </div>
+        <hr>
+        <ul class="nav nav-tabs navMenu">
+            <li class="nav-item">
+                <a class="nav-link active" id="first" href="#">Colors</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="second" href="#">Images</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="third" href="#">Files</a>
+            </li>
+        </ul>
+        <div class="backgroundColor-flex">
+            <div class="block" id="b1" style="background-color: teal"></div>
+            <div class="block" id="b2" style="background-color: seagreen"></div>
+            <div class="block" id="b3" style="background-color: springgreen"></div>
+            <div class="block" id="b4" style="background-color: green"></div>
+            <div class="block" id="b5" style="background-color: steelblue"></div>
+            <div class="block" id="b6" style="background-color:mediumblue"></div>
+            <div class="block" id="b7" style="background-color:mediumorchid"></div>
+            <div class="block" id="b8" style="background-color: indigo"></div>
+            <div class="block" id="b9" style="background-color: rgb(17, 51, 32)"></div>
+            <div class="block" id="b10" style="background-color: rgb(10, 41, 24)"></div>
+            <div class="block" id="b11" style="background-color: orange"></div>
+            <div class="block" id="b12" style="background-color: darkorange"></div>
+            <div class="block" id="b13" style="background-color: chocolate"></div>
+            <div class="block" id="b14" style="background-color: orangered"></div>
+            <div class="block" id="b15" style="background-color: red"></div>
+            <div class="block" id="b16" style="background-color:firebrick"></div>
+            <div class="block" id="b17" style="background-color: whitesmoke"></div>
+            <div class="block" id="b18" style="background-color:lightgray"></div>
+            <div class="block" id="b19" style="background-color: darkgray"></div>
+            <div class="block" id="b20" style="background-color: gray"></div>
+            <div class="block" id="b21" style="background-color: black"></div>
+        </div>
+        <div class="images">
+            <div class="img" style="background-image: url(images/Quy-Nhon-morning-city-view-1300px.jpg);"></div>
+            <div class="img" style="background-image: url(images/3-per-web-1300px.jpg);"></div>
+            <div class="img" style="background-image: url(images/1300px-Menton3.jpg);"></div>
+            <div class="img" style="background-image: url(images/1300px-Hong_Kong_at_night.jpg);"></div>
+            <div class="img" style="background-image: url(images/home-1300px-ArchiShot_009908.jpg);"></div>
+            <div class="img" style="background-image: url(images/images.jpg);"></div>
+            <div class="img" style="background-image: url(images/Industry-banners-Horticulture-1300px.jpg);"></div>
+            <div class="img" style="background-image: url(images/завантаження.jpg);"></div>
+            <div class="img" style="background-image: url(images/завантаження\ \(1\).jpg);"></div>
+        </div>
+        <div class="file">
+            <div class="input-group mb-3">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile02">
+                    <label class="custom-file-label" for="inputGroupFile02"
+                        aria-describedby="inputGroupFileAddon02">Choose file...</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="signIn">
+        <h1>Sign In</h1>
+        <hr>
+        <input type="text" id="login" placeholder="Login here...">
+        <input type="password" id="password" placeholder="Password here...">
+        <p class="text">Value is empty</p>
+        <input type="button" id="buttonSign" value="Sign in">
+    </div>
+
+    <form name="f1" class="table">
+        <div class="head">
+            <h2>Create table</h2>
+            <input type="button" id="close3">
+        </div>
+        <hr>
+        <div class="tableSettings">
+            <div class="tableTr">
+                <label for="tableTr">Count TR:</label>
+                <input type="text" name="tr" id="tableTr" placeholder="Type here...">
+            </div>
+            <div class="tableTd">
+                <label for="tableTd">Count TD:</label>
+                <input type="text" name="td" id="tableTd" placeholder="Type here...">
+            </div>
+            <div class="widthTd">
+                <label for="widthTd">Width of TD:</label>
+                <input type="text" name="widthTd" id="widthTd" placeholder="Type here...">
+            </div>
+            <div class="heightTd">
+                <label for="heightTd">Height of TD:</label>
+                <input type="text" name="heightTd" id="heightTd" placeholder="Type here...">
+            </div>
+            <div class="otherSettings">
+                <div class="widthBorder">
+                    <label for="widthBorder">Width of border:</label>
+                    <input type="text" id="widthBorder" placeholder="Type here...">
+                </div>
+                <div class="typeBorder">
+                    <label for="typeBorder">Style of border:</label>
+                    <select name="typeBorder" id="typeBorder">
+                        <option value="default" selected>choose style</option>
+                        <option value="solid">solid</option>
+                        <option value="dotted">dotted</option>
+                        <option value="double">double</option>
+                        <option value="dashed">dashed</option>
+                    </select>
+                </div>
+                <div class="colorBorder">
+                    <label for="colorBorder">Color of border:</label>
+                    <select name="colorBorder" id="colorBorder">
+                        <option value="default" selected>choose color</option>
+                        <option value="black">black</option>
+                        <option value="red">red</option>
+                        <option value="blue">blue</option>
+                        <option value="green">green</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <p class="someText">invalid value</p>
+        <input type="button" value="Reset" id="reset">
+        <input type="button" value="Create table" id="createTable">
+    </form>
+
+    <form name="ol" class="listOl">
+        <div class="head">
+            <h2>Create Ol</h2>
+            <input type="button" id="close4">
+        </div>
+        <hr>
+        <div class="olSettings">
+            <div class="countOl">
+                <label for="countOl">Count li item:</label>
+                <input type="text" name="countOl" id="countOl" placeholder="Type here...">
+            </div>
+            <div class="typeOl">
+                <label for="typeOl">Type mark of list:</label>
+                <select name="typeOl" id="typeOl">
+                    <option value="default" selected>choose Ol type mark</option>
+                    <option value="decimical">1</option>
+                    <option value="upper-roman">I</option>
+                    <option value="lower-roman">i</option>
+                    <option value="apper-alpha">A</option>
+                    <option value="lower-alpha">a</option>
+                </select>
+            </div>
+        </div>
+        </div>
+        <p class="someText1">invalid value</p>
+        <input type="button" value="Reset" id="resetOl">
+        <input type="button" value="Create list" id="createOlList">
+    </form>
+
+    <form name="ul" class="listUl">
+        <div class="head">
+            <h2>Create Ul</h2>
+            <input type="button" id="close5">
+        </div>
+        <hr>
+        <div class="ulSettings">
+            <div class="countUl">
+                <label for="countUl">Count li item:</label>
+                <input type="text" name="countUl" id="countUl" placeholder="Type here...">
+            </div>
+            <div class="typeUl">
+                <label for="typeUl">Type mark of list:</label>
+                <select name="typeUl" id="typeUl">
+                    <option value="default" selected>choose Ul type mark</option>
+                    <option value="circle">circle</option>
+                    <option value="disc">disc</option>
+                    <option value="square">square</option>
+                </select>
+            </div>
+        </div>
+        </div>
+        <p class="someText2">invalid value</p>
+        <input type="button" value="Reset" id="resetUl">
+        <input type="button" value="Create list" id="createUlList">
+    </form>
+
+    <div class="signOut">
+        <input type="button" value="Cancel" id="cancel">
+        <input type="button" value="Sign out" id="buttonSignOut">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
